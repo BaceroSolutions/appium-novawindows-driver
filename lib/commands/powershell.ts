@@ -106,7 +106,7 @@ export async function startPowerShellSession(this: NovaWindowsDriver): Promise<v
 export async function sendIsolatedPowerShellCommand(this: NovaWindowsDriver, command: string): Promise<string> {
     const magicNumber = 0xF2EE;
 
-    const powerShell = spawn('powershell.exe', ['-NoExit', '-Command', '-NoProfile', '-']);
+    const powerShell = spawn('powershell.exe', ['-NoExit', '-NoProfile', '-Command', '-']);
     try {
         powerShell.stdout.setEncoding('utf8');
         powerShell.stdout.setEncoding('utf8');
