@@ -16,7 +16,7 @@ const DEFAULT_WEBVIEW_DEVTOOLS_PORT_LOWER = 10900;
 const DEFAULT_WEBVIEW_DEVTOOLS_PORT_UPPER = 11000;
 
 export async function startPowerShellSession(this: NovaWindowsDriver): Promise<void> {
-    const powerShell = spawn('powershell.exe', ['-NoExit', '-Command', '-']);
+    const powerShell = spawn('powershell.exe', ['-NoExit', '-NoProfile', '-Command', '-']);
     powerShell.stdout.setEncoding('utf8');
     powerShell.stderr.setEncoding('utf8');
 

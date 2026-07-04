@@ -7,7 +7,7 @@ import * as system from './system';
 import * as app from './app';
 import * as contexts from './contexts';
 
-const commands = {
+const commands: any = {
     ...actions,
     ...powershell,
     ...element,
@@ -24,7 +24,7 @@ type Commands = {
 };
 
 declare module '../driver' {
-    interface NovaWindowsDriver extends Commands {}
+    interface NovaWindowsDriver extends Commands { }
 }
 
 export default commands;
